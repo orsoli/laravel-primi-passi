@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('home');
+    // Create Variables
+    $title = "First Laravel List";
+    $progLangsList = [
+                        "JavaScript",
+                        "Python",
+                        "Java",
+                        "C++",
+                        "PHP",
+                        "Ruby",
+                        "Swift",
+                        "C#",
+                        "Go",
+                        "Kotlin"
+                    ];
+
+    return view('home', compact('title','progLangsList'));
 });

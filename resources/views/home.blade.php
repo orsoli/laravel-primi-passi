@@ -17,6 +17,25 @@
 
     </head>
     <body>
-        <h1 class="fw-bold text-center py-4">Laravel Primi Passi</h1>
+        <main>
+            <div class="container">
+                <h1 class="text-center py-4"> {{$title}} </h1>
+                <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+                    @foreach ($progLangsList as $language)
+                    <div class="col">
+                        <div class="card shadow">
+                            <img class="card-img-top" src=".." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"> {{$language}} </h5>
+                                <p class="card-text">Programiming Language</p>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+
+            </div>
+        </main>
     </body>
 </html>
