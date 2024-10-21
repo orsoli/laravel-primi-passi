@@ -13,9 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+ // Home
 Route::get('/home', function () {
     // Create Variables
     $title = "First Laravel List";
+    $logo = 'LOGO';
+    $navBarList = [
+        'Home',
+        'About Us',
+        'Services',
+        'Contacts',
+    ];
     $sectionTitle = "Programing Language List";
     $progLangsList = [
                         "JavaScript",
@@ -30,20 +38,30 @@ Route::get('/home', function () {
                         "Kotlin"
                     ];
 
-    return view('home', compact('title','sectionTitle','progLangsList'));
+    return view('home', compact('title','logo','navBarList','sectionTitle','progLangsList'));
 });
 
-Route ::get('/header', function(){
-    // Decleare Variables
-    $title = 'Header';
-    $webName = 'Lavarvel';
-    $navBarList = [
-        'Home',
-        'About Us',
-        'Services',
-        'Contacts',
-    ];
+// About Us
+Route::get('/about', function () {
+    // Create Variables
+    $title = 'About Us';
+    $description = 'Founded in [2024], Our company was born out of a desire to simplify the learning journey for anyone interested in coding. Our team consists of experienced developers, educators, and tech lovers who understand the challenges faced by beginners and professionals alike. We believe that learning programming should be accessible, engaging, and effective.';
 
-    // Return
-    return view('header', compact('title','webName', 'navBarList'));
+    return view('about', compact('title', 'description'));
+});
+
+// Services
+Route::get('/home', function () {
+    // Create Variables
+    $title = 'About Us';
+
+    return view('home', compact('title'));
+});
+
+// Contacts
+Route::get('/home', function () {
+    // Create Variables
+    $title = 'About Us';
+
+    return view('home', compact('title'));
 });
