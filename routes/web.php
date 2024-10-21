@@ -51,11 +51,24 @@ Route::get('/about', function () {
 });
 
 // Services
-Route::get('/home', function () {
+Route::get('/services', function () {
     // Create Variables
-    $title = 'About Us';
+    $title = 'Services';
+    $services = [
+                    'Custom Web Application Development',
+                    'API Development',
+                    'E-commerce Solutions',
+                    'Content Management Systems (CMS)',
+                    'Performance Optimization',
+                    'Security Audits',
+                    'Maintenance & Support',
+                    'Migration to Laravel',
+                    'Training & Workshops',
+                    'Consultation Services'
+                ];
 
-    return view('home', compact('title'));
+
+    return view('services', compact('title', 'services'));
 });
 
 // Contacts
