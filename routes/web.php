@@ -72,9 +72,17 @@ Route::get('/services', function () {
 });
 
 // Contacts
-Route::get('/home', function () {
+Route::get('/contact', function () {
     // Create Variables
-    $title = 'About Us';
+    $title = 'Contacts';
+    $contacts = [
+                    'phone: +39 32x xxx xxx',
+                    'email: programming@gmail.com',
+                    'Twitter: Programing Languages',
+                    'Instagram: Programing Langages',
+                    'Facebook: Programing Languages',
+                    'Youtube: Programing Languages',
+    ];
 
-    return view('home', compact('title'));
+    return view('contact', compact('title', 'contacts'));
 });
