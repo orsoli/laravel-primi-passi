@@ -29,7 +29,7 @@
                     <ul class="navbar-nav mr-auto">
                         @foreach ($navBarList as $navBar)
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{{$navBar}}</a>
+                            <a class="nav-link" href="http://{{$localhost}}{{strtolower($navBar)}}">{{$navBar}}</a>
                         </li>
                         @endforeach
                     </ul>

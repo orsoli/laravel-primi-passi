@@ -18,11 +18,12 @@ Route::get('/home', function () {
     // Create Variables
     $title = "First Laravel List";
     $logo = 'LOGO';
+    $localhost = 'localhost:8000/';
     $navBarList = [
         'Home',
-        'About Us',
+        'About',
         'Services',
-        'Contacts',
+        'Contact',
     ];
     $sectionTitle = "Programing Language List";
     $progLangsList = [
@@ -38,7 +39,7 @@ Route::get('/home', function () {
                         "Kotlin"
                     ];
 
-    return view('home', compact('title','logo','navBarList','sectionTitle','progLangsList'));
+    return view('home', compact('title','logo','localhost','navBarList','sectionTitle','progLangsList'));
 });
 
 // About Us
