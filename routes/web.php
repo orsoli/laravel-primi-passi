@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', function () {
     // Create Variables
     $title = "First Laravel List";
+    $sectionTitle = "Programing Language List";
     $progLangsList = [
                         "JavaScript",
                         "Python",
@@ -29,5 +30,20 @@ Route::get('/home', function () {
                         "Kotlin"
                     ];
 
-    return view('home', compact('title','progLangsList'));
+    return view('home', compact('title','sectionTitle','progLangsList'));
+});
+
+Route ::get('/header', function(){
+    // Decleare Variables
+    $title = 'Header';
+    $webName = 'Lavarvel';
+    $navBarList = [
+        'Home',
+        'About Us',
+        'Services',
+        'Contacts',
+    ];
+
+    // Return
+    return view('header', compact('title','webName', 'navBarList'));
 });

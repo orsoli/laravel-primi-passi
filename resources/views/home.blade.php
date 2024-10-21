@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Orsol Filaj">
-        <meta name="description" content="First exercise whith Laravel Framework">
+        <meta name="description" content="{{$title}}">
 
-        <title>Laravel Primi Passi</title>
+        <title>{{$title}}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,6 +20,7 @@
         <main>
             <div class="container">
                 <h1 class="text-center py-4"> {{$title}} </h1>
+                <h5> {{$sectionTitle}}: </h5>
                 <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
                     @foreach ($progLangsList as $language)
                     <div class="col">
