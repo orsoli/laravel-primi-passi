@@ -47,15 +47,15 @@
                 <h5> {{$sectionTitle}}: </h5>
                 <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
                     @foreach ($progLangsList as $language)
-                    <div class="col">
-                        <div class="card shadow">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title"> {{$language}} </h5>
-                                <p class="card-text">Programiming Language</p>
+                        <div class="col">
+                            <div class="card shadow p-4">
+                                <a href="{{$language["url"]}}"><img class="card-img-top" src="{{$language["image"]}}" alt="Card image cap"></a>
+                                <div class="card-body">
+                                    <h5 class="card-title"> {{$language["name"]}} </h5>
+                                    <p class="card-text">{{$language["description"]}}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
 
